@@ -2,6 +2,7 @@ import React from 'react';
 import { useQuery } from 'react-query';
 import { useForm } from "react-hook-form";
 import { toast } from 'react-toastify';
+import Loading from '../Shared/Loading';
 
 const AddDoctor = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
@@ -9,6 +10,9 @@ const AddDoctor = () => {
 
 
     const { data: services, isLoading } = useQuery(['services'], () => fetch('http://localhost:5000/service').then(res => res.json()))
+    if(isLoading){
+        return <Loading />
+    }
 
     const onSubmit = async data => {
         const image = data.image[0];

@@ -22,7 +22,7 @@ function App() {
   return (
     <div className='max-w-7xl mx-auto'>
      <Navbar></Navbar>
-    <Routes>
+     <Routes>
       <Route path="/" element={<Home />}></Route>
       <Route path="/Home" element={<Home />}></Route>
       <Route path="/appointment" element={<RequireAuth>
@@ -36,8 +36,8 @@ function App() {
       <Route path='myReview' element={<MyReview></MyReview>} ></Route>
       <Route path='history' element={<MyHistory />} ></Route>
       <Route path='allUsers' element={<RequireAdmin><AllUser /></RequireAdmin>} ></Route>
-      <Route path='addDoctor' element={<AddDoctor />} ></Route>
-      <Route path='manageDoctor' element={<ManageDoctor />} ></Route>
+      <Route path='addDoctor' element={<RequireAdmin><AddDoctor /></RequireAdmin>} ></Route>
+      <Route path='manageDoctor' element={<RequireAdmin><ManageDoctor /></RequireAdmin>} ></Route>
       </Route>
 
       <Route path="/about" element={

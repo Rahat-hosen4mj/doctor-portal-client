@@ -8,13 +8,14 @@ import Loading from './Loading';
 
 const RequireAdmin = ({children}) => {
     const [user, loading] = useAuthState(auth);
-    const [admin, adminLoading] = useAdmin(user)
+    const [admin, adminLoading] = useAdmin(user);
+    console.log('i am from menu bar',admin)
     let location = useLocation();
 
     if(loading || adminLoading){
         return <Loading />
     }
-    if (!admin) {
+    if (!user ||  !admin) {
         signOut(auth);
         return <Navigate to="/login" state={{ from: location }} replace />;
       }
@@ -22,4 +23,3 @@ const RequireAdmin = ({children}) => {
 };
 
 export default RequireAdmin;
-

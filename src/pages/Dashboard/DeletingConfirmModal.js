@@ -36,8 +36,8 @@ const DeletingConfirmModal = ({ deletingDoctor,refetch, setDeletingDoctor}) => {
             use Wikipedia for free!
           </p>
           <div className="modal-action">
-          <button onClick={() => handleDelete()} class="btn btn-xs btn-error">Delete</button>
-          <label htmlFor="delete-confirm-modal" class="btn btn-xs">Cancel</label>
+          <button onClick={() => handleDelete()} className="btn btn-xs btn-error">Delete</button>
+          <label htmlFor="delete-confirm-modal" className="btn btn-xs">Cancel</label>
           </div>
         </div>
       </div>

@@ -34,7 +34,7 @@ const MyAppointment = () => {
 
     return (
         <div>
-            <h2>Hello this is testing purpose</h2>
+        
         <h2>My Appointments: {appointments.length}</h2>
         <div className="overflow-x-auto">
             <table className="table w-full">

@@ -71,5 +71,5 @@ const BookingModal = ({ date, treatment, setTreatment, refetch }) => {
         </div>
     );
 };
-
+ 
 export default BookingModal;

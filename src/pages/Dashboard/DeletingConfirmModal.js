@@ -6,7 +6,7 @@ const DeletingConfirmModal = ({ deletingDoctor,refetch, setDeletingDoctor}) => {
 
     
  const handleDelete = () =>{
-    fetch(`https://doctor-portal-server22.herokuapp.com/doctor/${email}`,{
+    fetch(`https://doctor-server-side-six.vercel.app/doctor/${email}`,{
         method:"DELETE",
         headers:{
             authorization: `Bearar ${localStorage.getItem('accessToken')}`

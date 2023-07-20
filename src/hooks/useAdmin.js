@@ -6,7 +6,7 @@ const useAdmin = (user) => {
   const [adminLoading, setAdminLoading] = useState(true);
   useEffect(() => {
     const email = user?.email;
-    fetch(`https://doctor-portal-server22.herokuapp.com/admin/${email}`, {
+    fetch(`https://doctor-server-side-six.vercel.app/admin/${email}`, {
       method: "GET",
       headers: {
         "content-type": "application/json",

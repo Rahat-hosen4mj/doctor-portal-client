@@ -9,7 +9,7 @@ const AddDoctor = () => {
     const imageStorageKey='809333cd2653b2fe985b53469c60e38c';
 
 
-    const { data: services, isLoading } = useQuery(['services'], () => fetch('https://doctor-portal-server22.herokuapp.com/service').then(res => res.json()))
+    const { data: services, isLoading } = useQuery(['services'], () => fetch('https://doctor-server-side-six.vercel.app/service').then(res => res.json()))
     if(isLoading){
         return <Loading />
     }
@@ -34,7 +34,7 @@ const AddDoctor = () => {
                     img: img
                 }
                 // send to your database 
-                fetch('https://doctor-portal-server22.herokuapp.com/doctor', {
+                fetch('https://doctor-server-side-six.vercel.app/doctor', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json',

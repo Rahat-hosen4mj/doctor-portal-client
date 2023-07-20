@@ -7,7 +7,7 @@ const useToken = user =>{
         const email = user?.user?.email;
         const currentUser = {email: email}
         if(email){
-            fetch(`https://mighty-spire-69340.herokuapp.com/user/${email}`,{
+            fetch(`https://doctor-server-side-six.vercel.app/user/${email}`,{
                 method: 'PUT',
                 headers:{
                     'content-type': 'application/json'

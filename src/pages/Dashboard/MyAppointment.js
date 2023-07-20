@@ -14,7 +14,7 @@ const MyAppointment = () => {
 
     useEffect(() =>{
         if(user){
-            fetch(`https://mighty-spire-69340.herokuapp.com/booking?patient=${user.email}`,{
+            fetch(`https://doctor-server-side-six.vercel.app/booking?patient=${user.email}`,{
                 method: 'GET',
                 headers:{
                     'authorization': `Bearar ${localStorage.getItem('accessToken')}`

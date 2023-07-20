@@ -24,7 +24,7 @@ const BookingModal = ({ date, treatment, setTreatment, refetch }) => {
             phone: event.target.phone.value
         }
 
-        fetch('https://mighty-spire-69340.herokuapp.com/booking', {
+        fetch('https://doctor-server-side-six.vercel.app/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

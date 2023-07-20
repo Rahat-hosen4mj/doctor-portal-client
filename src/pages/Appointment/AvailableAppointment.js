@@ -10,13 +10,13 @@ const AvailableAppointment = ({date, setDate}) => {
     const [treatment, setTreatment] = useState(null)
     const formattedDate = format(date, 'PP');
 
-    const {data: services, isLoading, refetch} = useQuery(['available', formattedDate], () =>  fetch(`https://mighty-spire-69340.herokuapp.com/available?date=${formattedDate}`).then(res => res.json()));
+    const {data: services, isLoading, refetch} = useQuery(['available', formattedDate], () =>  fetch(`https://doctor-server-side-six.vercel.app/available?date=${formattedDate}`).then(res => res.json()));
 
     if(isLoading){
       return <Loading></Loading>
     }
     // useEffect(() =>{
-    //   fetch(`https://mighty-spire-69340.herokuapp.com/available?date=${formattedDate}`)
+    //   fetch(`https://doctor-server-side-six.vercel.app/available?date=${formattedDate}`)
     //     .then(res => res.json())
     //     .then(data => setServices(data))
     // },[formattedDate])

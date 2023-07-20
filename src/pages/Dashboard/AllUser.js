@@ -5,7 +5,7 @@ import UserRow from "./UserRow";
 
 const AllUser = () => {
   const { data: users, isLoading, refetch } = useQuery(["users"], () =>
-    fetch("https://doctor-portal-server22.herokuapp.com/user").then((res) => res.json())
+    fetch("https://doctor-server-side-six.vercel.app/user").then((res) => res.json())
   );
 
   if (isLoading) {

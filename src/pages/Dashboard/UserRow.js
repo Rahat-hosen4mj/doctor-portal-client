@@ -5,7 +5,7 @@ const UserRow = ({ user, index, refetch }) => {
   const { email, role } = user;
 
   const makeAdmin = () => {
-    fetch(`https://doctor-portal-server22.herokuapp.com/user/admin/${email}`, {
+    fetch(`https://doctor-server-side-six.vercel.app/user/admin/${email}`, {
       method: "PUT",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

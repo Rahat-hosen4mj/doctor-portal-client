@@ -14,7 +14,7 @@ const CheckoutForm = ({ appointment }) => {
 
   useEffect(() => {
     fetch(
-      "https://doctor-portal-server22.herokuapp.com/create-payment-intent",
+      "https://doctor-server-side-six.vercel.app/create-payment-intent",
       {
         method: "POST",
         headers: {
@@ -82,7 +82,7 @@ const CheckoutForm = ({ appointment }) => {
         appointment: _id,
         transactionId: paymentIntent.id,
       };
-      fetch(`https://doctor-portal-server22.herokuapp.com/booking/${_id}`, {
+      fetch(`https://doctor-server-side-six.vercel.app/booking/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",
